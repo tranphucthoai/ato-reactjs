@@ -15,7 +15,7 @@ function BlockSlider01({ data }) {
     return (
         <>
             <section className="section-block block-slider-01">
-                <ModuleHeadingMain headingText={"FEATURED NEWS"} />
+                <ModuleHeadingMain hasContainer={true} headingText={"FEATURED NEWS"} />
                 <div className="section-inner container-fullwidth">
                     <div className="section-main">
                         <div className="container">

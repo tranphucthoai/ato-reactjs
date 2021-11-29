@@ -31,9 +31,9 @@ function PostHorizontalMd({ data }) {
                         <div className="post__author me-5 ">
                             <div className="post__author-text text-capitalize f-16">
                                 <span className="op-08 f-16"> By </span>
-                                <a className="f-w-700" href="">
+                                <Link to='/' className="f-w-700">
                                     {data?.authorName}
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="post__time">

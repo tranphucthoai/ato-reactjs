@@ -34,9 +34,9 @@ function PostOverlayLg({ data }) {
                             </div>
                             <div className="post__author-text text-capitalize f-16">
                                 <span className="op-07 f-16"> By </span>
-                                <a className="f-w-700" href="">
+                                <Link to="/" className="f-w-700">
                                     {data?.authorName}
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="post__time">

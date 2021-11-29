@@ -2,36 +2,35 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, useRouteMatch } from 'react-router-dom';
 
-
-PostVerticalSlider.propTypes = {
+PostVerticalCatTranslate.propTypes = {
     data: PropTypes.object
 };
-PostVerticalSlider.defaultProps = {
+PostVerticalCatTranslate.defaultProps = {
     data: {}
 };
-function PostVerticalSlider({ data }) {
+function PostVerticalCatTranslate({ data }) {
     let match = useRouteMatch();
     return (
-        <article className="post post--vertical post--vertical-slider">
-            <div className="post__thumb object-cover thumb-640 thumb-lg">
+        <article className="post post--vertical post--vertical-cat-translate">
+            <div className="post__thumb thumb-350 thumb-sm object-cover">
                 <Link to={`${match.url}:${data?.dataId}`}>
                     <img src={data?.thumb} alt="" />
                 </Link>
             </div>
-            <div className="post__text inverse-text text-center">
+            <div className="post__text inverse-text">
                 <Link to={`${match.url}:${data?.dataId}`} className="post__cat text-uppercase post__cat-normal bg-primary">
                     {data?.categoryName}
                 </Link>
-                <h3 className="post__title text-capitalize f-w-700 f-60 mt-15 text-limit-2">
+                <h3 className="post__title f-32 f-w-700 mt-10">
                     <Link to={`${match.url}:${data?.dataId}`}>
                         {data?.title}
                     </Link>
                 </h3>
-                <div className="post__meta mt-15 flex-box justify-content-center">
+                <div className="post__meta mt-15 flex-box">
                     <div className="post__author me-5 ">
                         <div className="post__author-text text-capitalize f-16">
                             <span className="op-08 f-16"> By </span>
-                            <Link to="/" className="f-w-700" href="">
+                            <Link to="/" className="f-w-700">
                                 {data?.authorName}
                             </Link>
                         </div>
@@ -46,4 +45,4 @@ function PostVerticalSlider({ data }) {
     );
 }
 
-export default PostVerticalSlider;
+export default PostVerticalCatTranslate;

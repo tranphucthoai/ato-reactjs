@@ -5,7 +5,10 @@ import PostHorizontalXl from './../../../components/listing-grid-no-sidebar-01/p
 import PostOverlayNormal from './../../../components/listing-grid-no-sidebar-01/post-overlay-normal/index';
 
 ListingGridNoSidebar01.propTypes = {
-
+    data: PropTypes.array
+};
+ListingGridNoSidebar01.defaultProps = {
+    data: []
 };
 
 function ListingGridNoSidebar01({ data }) {

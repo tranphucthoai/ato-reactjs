@@ -21,7 +21,7 @@ function PostOverlayNormal({ data }) {
             </div>
             <div className="post__text inverse-text overlay-420">
                 <div className="post__text-inner">
-                    <Link to={`${match.url}:${data?.dataId}`} href="" className="post__cat text-uppercase post__cat-normal bg-primary">
+                    <Link to={`${match.url}:${data?.dataId}`} className="post__cat text-uppercase post__cat-normal bg-primary">
                         {data?.categoryName}
                     </Link>
                     <h3 className="post__title f-w-700 f-26 mt-10">
@@ -31,9 +31,9 @@ function PostOverlayNormal({ data }) {
                         <div className="post__author me-5">
                             <div className="post__author-text text-capitalize f-16">
                                 <span className="op-08 f-16"> By </span>
-                                <a className="f-w-700" href="">
+                                <Link to="/" className="f-w-700">
                                     {data?.authorName}
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <div className="post__time">

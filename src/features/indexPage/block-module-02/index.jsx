@@ -12,7 +12,7 @@ BlockModule02.propTypes = {
 function BlockModule02({ data }) {
     return (
         <section className="section-block block-module-02">
-            <ModuleHeadingMain headingText={" editor's choise"} />
+            <ModuleHeadingMain hasContainer={true} headingText={" editor's choise"} />
             <div className="section-inner flex-box container-fullwidth">
                 <div className="section-main">
                     <PostOverlayLg data={data[0]} />
