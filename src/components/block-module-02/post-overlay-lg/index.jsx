@@ -33,7 +33,7 @@ function PostOverlayLg({ data }) {
                                 <img src={data?.authorThumb} alt="" />
                             </div>
                             <div className="post__author-text text-capitalize f-16">
-                                <span className="op-07 f-16"> By</span>
+                                <span className="op-07 f-16"> By </span>
                                 <a className="f-w-700" href="">
                                     {data?.authorName}
                                 </a>

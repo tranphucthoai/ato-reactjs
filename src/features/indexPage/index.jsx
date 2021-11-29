@@ -1,10 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
-// import '../../assets/css/owl.carousel.min.css';
-// import '../../assets/css/owl.theme.default.min.css';
+import '../../assets/css/owl.carousel.min.css';
+import '../../assets/css/owl.theme.default.min.css';
 import '../../assets/css/app.css';
+
 import dataApi from '../../api/dataApi';
 import BlockModule01 from './block-module-01';
 import BlockModule02 from './block-module-02';
+import ListingGridNoSidebar01 from './listing-grid-no-sidebar-01/index';
+import BlockSlider01 from './block-slider-01';
 
 
 function IndexPage() {
@@ -40,7 +43,13 @@ function IndexPage() {
             <BlockModule02
                 data={data?.slice(4, 8)}
             />
+            <ListingGridNoSidebar01
+                data={data?.slice(8, 13)}
+            />
 
+            <BlockSlider01
+                data={data?.slice(13, 17)}
+            />
         </main>
     );
 }
