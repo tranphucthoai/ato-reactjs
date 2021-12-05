@@ -1,9 +1,9 @@
-import React from 'react';
 import PropTypes from 'prop-types';
-import PostHorizontalTextMargin from '../../../components/post-horizontal-text-margin/index';
-import PostHorizontalSm from '../../../components/post-horizontal-sm/index';
-import PostVerticalCatTranslate from '../../../components/post-vertical-cat-translate/index';
-import HeadingSub from '../../../components/module-heading-sub/index';
+import React from 'react';
+import HeadingSub from '../../../components/heading-sub';
+import PostHorizontalTextMargin from '../../../components/post-horizontal-text-margin';
+import PostVerticalCatTranslate from '../../../components/post-vertical-cat-translate';
+import SliderNormal from './../../../components/slider-normal';
 
 BlockModule03.propTypes = {
     data: PropTypes.array.isRequired
@@ -33,13 +33,14 @@ function BlockModule03({ data }) {
                                     <i className="fa fa-angle-right"></i>
                                 </div>
                             </div>
-                            <div id="carousel-01" className="owl-carousel owl-theme js-carousel-autowidth">
+                            {/* <div id="carousel-01" className="owl-carousel owl-theme js-carousel-autowidth">
                                 {data.slice(2, 6).map(dataItem => (
                                     <div key={dataItem.dataId} className="item">
                                         <PostHorizontalSm data={dataItem} />
                                     </div>
                                 ))}
-                            </div>
+                            </div> */}
+                            <SliderNormal data={data.slice(2)} />
                         </div>
                     </div>
                 </div>

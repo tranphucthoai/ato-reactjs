@@ -10,6 +10,7 @@ import ListingGridNoSidebar01 from './listing-grid-no-sidebar-01/index';
 import BlockSlider01 from './block-slider-01';
 import ListingGridNoSidebar02 from './listing-grid-no-sidebar-02';
 import BlockModule03 from './block-module-03';
+import ListingGridHasSidebar from './listing-grid-has-sidebar-01';
 
 
 function IndexPage() {
@@ -58,7 +59,11 @@ function IndexPage() {
             />
 
             <BlockModule03
-                data={data?.slice(21, 27)}
+                data={data?.slice(21, 30)}
+            />
+
+            <ListingGridHasSidebar
+                data={data?.slice(30, 42)}
             />
         </main>
     );

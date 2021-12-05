@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import HeadingMain from '../../../components/module-heading-main';
+import HeadingMain from '../../../components/heading-main';
 import PostHorizontalXl from '../../../components/post-horizontal-xl/index';
 import PostOverlayNormal from '../../../components/post-overlay-normal/index';
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import HeadingMain from '../../../components/module-heading-main';
-import BlockSliderDefault from '../../../components/block-slider';
+import HeadingMain from '../../../components/heading-main';
+import SliderDefault from '../../../components/slider-default';
 
 BlockSlider01.propTypes = {
     data: PropTypes.array
@@ -19,7 +19,7 @@ function BlockSlider01({ data }) {
                 <div className="section-inner container-fullwidth">
                     <div className="section-main">
                         <div className="container">
-                            <BlockSliderDefault data={data} />
+                            <SliderDefault data={data} />
                         </div>
                     </div>
                 </div>

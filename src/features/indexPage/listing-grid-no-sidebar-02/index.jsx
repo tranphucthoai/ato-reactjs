@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import HeadingMain from '../../../components/module-heading-main';
+import HeadingMain from '../../../components/heading-main';
 import PostVerticalReverseThumbAside from '../../../components/post-vertical-reverse-thumb-aside';
 
 ListingGridNoSidebar02.propTypes = {

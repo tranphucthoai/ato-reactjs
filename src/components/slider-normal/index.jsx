@@ -2,16 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
-import PostVerticalSlider from './../post-vertical-slider/index';
+import PostHorizontalSm from './../post-horizontal-sm';
 
-BlockSliderDefault.propTypes = {
+SliderNormal.propTypes = {
     data: PropTypes.array
 };
-BlockSliderDefault.defaultProps = {
+SliderNormal.defaultProps = {
     data: []
 };
-function BlockSliderDefault({ data }) {
+function SliderNormal({ data }) {
     function SampleNextArrow(props) {
         const { className, onClick } = props;
         return (
@@ -40,7 +39,7 @@ function BlockSliderDefault({ data }) {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 1,
+        slidesToShow: 3,
         slidesToScroll: 1,
         adaptiveHeight: true,
         centerMode: true,
@@ -57,7 +56,7 @@ function BlockSliderDefault({ data }) {
             {
                 data.map(dataItem => (
                     <div key={dataItem.dataId} className="item">
-                        <PostVerticalSlider data={dataItem} />
+                        <PostHorizontalSm data={dataItem} />
                     </div>
                 ))
             }
@@ -66,4 +65,4 @@ function BlockSliderDefault({ data }) {
     );
 }
 
-export default BlockSliderDefault;
+export default SliderNormal;
