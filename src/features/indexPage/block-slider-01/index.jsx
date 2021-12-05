@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ModuleHeadingMain from '../../../components/block-module-heading/module-heading-main';
-import BlockSliderDefault from '../../../components/block-slider-01/block-slider-01/block-slider';
+import HeadingMain from '../../../components/module-heading-main';
+import BlockSliderDefault from '../../../components/block-slider';
 
 BlockSlider01.propTypes = {
     data: PropTypes.array
@@ -15,7 +15,7 @@ function BlockSlider01({ data }) {
     return (
         <>
             <section className="section-block block-slider-01">
-                <ModuleHeadingMain hasContainer={true} headingText={"FEATURED NEWS"} />
+                <HeadingMain hasContainer={true} headingText={"FEATURED NEWS"} />
                 <div className="section-inner container-fullwidth">
                     <div className="section-main">
                         <div className="container">

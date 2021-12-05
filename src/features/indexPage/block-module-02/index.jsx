@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import ModuleHeadingMain from '../../../components/block-module-heading/module-heading-main';
-import PostOverlayMd from './../../../components/block-module-02/module-02-overlay-md/index';
-import PostHorizontalMd from './../../../components/block-module-02/post-horizontal-md/index';
-import PostOverlayLg from './../../../components/block-module-02/post-overlay-lg/index';
+import HeadingMain from '../../../components/heading-main';
+import PostOverlayLg from '../../../components/post-overlay-lg/index';
+import PostHorizontalMd from '../../../components/post-horizontal-md/index';
+import PostOverlayMd from '../../../components/post-overlay-md/index';
 
 BlockModule02.propTypes = {
     data: PropTypes.array.isRequired
@@ -12,7 +12,7 @@ BlockModule02.propTypes = {
 function BlockModule02({ data }) {
     return (
         <section className="section-block block-module-02">
-            <ModuleHeadingMain hasContainer={true} headingText={" editor's choise"} />
+            <HeadingMain hasContainer={true} headingText={" editor's choise"} />
             <div className="section-inner flex-box container-fullwidth">
                 <div className="section-main">
                     <PostOverlayLg data={data[0]} />

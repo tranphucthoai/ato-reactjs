@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ModuleHeadingMain from '../../../components/block-module-heading/module-heading-main';
-import PostHorizontalXl from './../../../components/listing-grid-no-sidebar-01/post-horizontal-xl/index';
-import PostOverlayNormal from './../../../components/listing-grid-no-sidebar-01/post-overlay-normal/index';
+import HeadingMain from '../../../components/module-heading-main';
+import PostHorizontalXl from '../../../components/post-horizontal-xl/index';
+import PostOverlayNormal from '../../../components/post-overlay-normal/index';
 
 ListingGridNoSidebar01.propTypes = {
     data: PropTypes.array
@@ -15,7 +15,7 @@ function ListingGridNoSidebar01({ data }) {
     return (
         <section className="section-block listing-grid-no-sidebar-01">
             <div className="container">
-                <ModuleHeadingMain headingText={"TOP TRENDING"} />
+                <HeadingMain headingText={"TOP TRENDING"} />
                 <div className="section-inner flex-box">
                     <div className="section-main">
                         <ul className="posts-list flex-box flex-space-40 flex-box-1i">

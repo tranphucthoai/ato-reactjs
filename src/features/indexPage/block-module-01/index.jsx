@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import PostVerticalReverse from '../../../components/block-module-01/post-vertical-reverse';
-import PostVeticalFullWidth from './../../../components/block-module-01/post-vertical-full-width/index';
+import PostVeticalFullWidth from '../../../components/post-vertical-full-width';
+import PostVerticalReverse from './../../../components/block-module-01/post-vertical-reverse/index';
 
 BlockModule01.propTypes = {
     data: PropTypes.array.isRequired,

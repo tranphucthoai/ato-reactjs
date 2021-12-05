@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import PostHorizontalTextMargin from './../../../components/block-module-03/post-horizontal-text-margin/index';
-import PostHorizontalSm from './../../../components/block-module-03/post-horizontal-sm/index';
-import PostVerticalCatTranslate from './../../../components/block-module-03/post-vertical-cat-translate/index';
-import ModuleHeadingSub from './../../../components/block-module-heading/module-heading-sub/index';
+import PostHorizontalTextMargin from '../../../components/post-horizontal-text-margin/index';
+import PostHorizontalSm from '../../../components/post-horizontal-sm/index';
+import PostVerticalCatTranslate from '../../../components/post-vertical-cat-translate/index';
+import HeadingSub from '../../../components/module-heading-sub/index';
 
 BlockModule03.propTypes = {
     data: PropTypes.array.isRequired
@@ -13,7 +13,7 @@ function BlockModule03({ data }) {
     return (
         <section className="section-block block-module-03">
             <div className="container-lg px-15">
-                <ModuleHeadingSub hasContainer={false} headingText={"TOP TRENDING"} />
+                <HeadingSub hasContainer={false} headingText={"TOP TRENDING"} />
                 <div className="section-inner flex-box container-fullwidth">
                     <div className="section-main">
                         <div className="post-main">
