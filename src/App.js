@@ -1,5 +1,5 @@
 import { React } from "react";
-import IndexPage from "./features/indexPage";
+import { IndexPage } from "./features";
 
 function App() {
   return (
