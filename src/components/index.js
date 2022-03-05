@@ -16,3 +16,4 @@ export { default as PostVerticalReverseThumbAside } from "./PostVerticalReverseT
 export { default as PostVerticalSlider } from "./PostVerticalSlider";
 export { default as SliderNormal } from "./SliderNormal";
 export { default as SliderDefault } from "./SliderDefault";
+export { default as Footer } from "./Footer";

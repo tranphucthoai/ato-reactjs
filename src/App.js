@@ -1,10 +1,11 @@
 import { React } from "react";
-import { IndexPage } from "./features";
+import { IndexPage, SinglePage } from "./features";
 
 function App() {
   return (
     <div className="App">
-      <IndexPage />
+      {/* <IndexPage /> */}
+      <SinglePage />
     </div>
   );
 }
