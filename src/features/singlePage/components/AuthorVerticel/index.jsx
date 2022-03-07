@@ -1,18 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-AuthorVerticel.propTypes = {};
+AuthorVerticel.propTypes = {
+  data: PropTypes.object,
+};
 
-function AuthorVerticel(props) {
+function AuthorVerticel({ data: { thumb, name, time } }) {
   return (
     <div className="author author-verticel">
-      <div className="author__thumb"></div>
+      <div className="author__thumb">
+        <img src={thumb} alt="" />
+      </div>
       <div className="author-text">
-        <a href="/" className="author__name">
-          ok
+        <a href="/" className="author__name f-16">
+          {name}
         </a>
-        <time class="author__time" datetime="6 Mar 2019">
-          6 Mar 2019
+        <time class="author__time f-14" datetime="6 Mar 2019">
+          {time?.slice(0, 10)}
         </time>
       </div>
     </div>
