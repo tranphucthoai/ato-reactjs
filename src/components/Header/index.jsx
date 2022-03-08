@@ -49,17 +49,17 @@ function Header() {
                 </Link>
               </li>
               <li className="nav__item">
-                <Link to={"/"} className="nav__link active">
+                <Link to={"/listing"} className="nav__link active">
                   BlogPost
                 </Link>
               </li>
               <li className="nav__item">
-                <Link to={"/"} className="nav__link active">
+                <Link to={"/single"} className="nav__link active">
                   Single
                 </Link>
               </li>
               <li className="nav__item">
-                <Link to={"/"} className="nav__link active">
+                <Link to={"/not-found"} className="nav__link active">
                   System Pages
                 </Link>
               </li>

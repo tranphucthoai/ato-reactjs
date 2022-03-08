@@ -1,12 +1,8 @@
-import React, { useImperativeHandle, useRef, forwardRef } from "react";
-import PropTypes from "prop-types";
-import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
+import React, { forwardRef, useImperativeHandle, useRef } from "react";
+import OwlCarousel from "react-owl-carousel";
 import PostHorizontalSm from "../PostHorizontalSm";
-SliderNormal.propTypes = {
-  data: PropTypes.array,
-};
 
 function SliderNormal(props, ref) {
   const { data } = props;
