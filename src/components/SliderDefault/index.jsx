@@ -14,7 +14,7 @@ function SliderDefault({ data = [] }) {
     items: 1,
     nav: false,
     dots: true,
-    margin: 0,
+    autoHeight: true,
     loop: true,
     smartSpeed: 600,
     center: true,

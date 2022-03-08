@@ -5,11 +5,8 @@ import { HeadingMain, SliderDefault } from "../../../../components";
 BlockSlider01.propTypes = {
   data: PropTypes.array,
 };
-BlockSlider01.defaultProps = {
-  data: [],
-};
 
-function BlockSlider01({ data }) {
+function BlockSlider01({ data = [] }) {
   return (
     <>
       <section className="section-block block-slider-01">

@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { dataApi } from "../../../api";
 import { Footer, Header, PostVerticalFullWidth } from "../../../components";
-import { AuthorVerticel, PostsNavigation, SocialVertical } from "../components";
+import {
+  AuthorVerticel,
+  PostsRelative,
+  PostsNavigation,
+  SocialVertical,
+} from "../components";
 
 SinglePage.propTypes = {};
 
@@ -38,10 +43,58 @@ function SinglePage() {
       link: "linked.com",
     },
   ];
+
+  const dataPostRelative = [
+    {
+      authorName: "Bobbie Rohan",
+      authorThumb: "https://cdn.fakercloud.com/avatars/nsamoylov_128.jpg",
+      dataId: "2faad1b9-1ed1-408e-8d9b-ab604be2cc8c",
+      categoryName: "Toys",
+      categoryColor: "violet",
+      title: "Explicabo corporis velit quia corporis at suscipit iusto error.",
+      description:
+        "Quaerat mollitia dignissimos suscipit dolores voluptatem totam aut odio. Quae officia voluptatibus nesciunt maxime. Eligendi reprehenderit facere. Id omnis laboriosam veniam molestias. Perferendis excepturi ratione.",
+      createAt: "2021-05-17T13:24:20.769Z",
+      updateAt: "2021-12-04T18:29:00.692Z",
+      thumb:
+        "https://f.hubspotusercontent40.net/hubfs/20002096/21-Jul-05-2021-03-03-31-83-AM.jpg",
+      content: "",
+    },
+    {
+      authorName: "Bobbie Rohan",
+      authorThumb: "https://cdn.fakercloud.com/avatars/nsamoylov_128.jpg",
+      dataId: "6cffb5eb-495c-45b9-8c55-02b73b0fae22",
+      categoryName: "Toys",
+      categoryColor: "violet",
+      title:
+        "Quisquam asperiores voluptatem eum in repudiandae culpa deserunt dolorum eum.",
+      description:
+        "Quam id est eum id qui perspiciatis aliquam rerum qui. Magni accusamus quae quia soluta et quia perspiciatis ea. Velit est maxime ratione. Explicabo accusamus expedita repellendus id qui.",
+      createAt: "2021-04-05T02:45:24.425Z",
+      updateAt: "2022-02-23T11:07:10.192Z",
+      thumb: "https://f.hubspotusercontent40.net/hubfs/20002096/45.jpg",
+      content: "",
+    },
+    {
+      authorName: "Bobbie Rohan",
+      authorThumb: "https://cdn.fakercloud.com/avatars/nsamoylov_128.jpg",
+      dataId: "5b7b9ebc-0a7e-40f4-8af9-796e6a66b65d",
+      categoryName: "Toys",
+      categoryColor: "violet",
+      title: "Aut optio nulla labore consectetur unde quo qui.",
+      description:
+        "Aliquam libero rerum magnam non quasi sint. Aut id enim alias. Occaecati est nihil consequuntur dolor sit. Vel facere tempora. Iste nemo deleniti aliquam suscipit quae. Quia non ad quibusdam.",
+      createAt: "2021-12-27T11:23:30.499Z",
+      updateAt: "2021-05-25T07:49:10.183Z",
+      thumb:
+        "https://f.hubspotusercontent40.net/hubfs/20002096/12-Jul-05-2021-03-06-05-81-AM.jpg",
+      content: "",
+    },
+  ];
   return (
     <>
       <Header />
-      <main>
+      <main style={{ overflowX: "hidden" }}>
         <section className="single">
           <div className="single-header">
             <PostVerticalFullWidth data={data[0]} />
@@ -127,6 +180,9 @@ function SinglePage() {
               </div>
               <div></div>
             </div>
+          </div>
+          <div className="single-footer">
+            <PostsRelative data={dataPostRelative} />
           </div>
         </section>
       </main>
