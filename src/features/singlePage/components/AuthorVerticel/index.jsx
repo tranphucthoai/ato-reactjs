@@ -1,5 +1,5 @@
-import React from "react";
 import PropTypes from "prop-types";
+import React from "react";
 
 AuthorVerticel.propTypes = {
   data: PropTypes.object,
@@ -15,7 +15,7 @@ function AuthorVerticel({ data: { thumb, name, time } }) {
         <a href="/" className="author__name f-16">
           {name}
         </a>
-        <time class="author__time f-14" datetime="6 Mar 2019">
+        <time className="author__time f-14" dateTime="6 Mar 2019">
           {time?.slice(0, 10)}
         </time>
       </div>

@@ -13,20 +13,20 @@ function PostHorizontalMd({ data }) {
   return (
     <article className="post post--horizontal post--horizontal-md bg-primary">
       <div className="post__thumb object-cover">
-        <Link to={useLinkSingle(data.id)}>
+        <Link to={useLinkSingle(data.dataId)}>
           <img src={data?.thumb} alt="" />
         </Link>
       </div>
       <div className="post__text flex-box inverse-text">
         <div className="post__text-inner flex-item-auto">
           <Link
-            to={useLinkSingle(data.id)}
+            to={useLinkSingle(data.dataId)}
             className="post__cat text-uppercase f-w-500"
           >
             {data?.categoryName}
           </Link>
           <h3 className="post__title f-22 f-w-700 mt-10 text-limit-2">
-            <Link to={useLinkSingle(data.id)}>{data?.title}</Link>
+            <Link to={useLinkSingle(data.dataId)}>{data?.title}</Link>
           </h3>
           <div className="post__meta mt-15 flex-box">
             <div className="post__author me-5 ">
@@ -51,7 +51,7 @@ function PostHorizontalMd({ data }) {
         </div>
         <div className="post__text-inner">
           <div className="post__readmore">
-            <Link to={useLinkSingle(data.id)}>
+            <Link to={useLinkSingle(data.dataId)}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"

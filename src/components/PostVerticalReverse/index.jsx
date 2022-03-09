@@ -12,7 +12,7 @@ function PostVerticalReverse({ data }) {
     <article className="post post--vertical post--vertical-reverse">
       <div className="post__meta inverse-text">
         <div className="post__readmore">
-          <Link to={useLinkSingle(data.id)}>
+          <Link to={useLinkSingle(data.dataId)}>
             <span className="post__readmore-text f-16 f-w-400 me-5">
               Read More
             </span>
@@ -32,19 +32,19 @@ function PostVerticalReverse({ data }) {
         </div>
       </div>
       <div className="post__thumb thumb-350 thumb-sm object-cover">
-        <Link to={useLinkSingle(data.id)}>
+        <Link to={useLinkSingle(data.dataId)}>
           <img src={data?.thumb} alt="" />
         </Link>
       </div>
       <div className="post__text inverse-text ">
         <Link
           className="post__cat text-uppercase f-12"
-          to={useLinkSingle(data.id)}
+          to={useLinkSingle(data.dataId)}
         >
           {data?.categoryName}
         </Link>
         <h3 className="post__title f-32 f-w-700 mt-10 text-limit-2">
-          <Link to={useLinkSingle(data.id)}>{data?.title}</Link>
+          <Link to={useLinkSingle(data.dataId)}>{data?.title}</Link>
         </h3>
         <div className="post__excerpt op-08 f-16 mt-14 text-limit-3">
           {data?.description}

@@ -13,7 +13,7 @@ function PostVerticalReverseThumbAside({ data }) {
       <div className="post__content-group">
         <div className="post__meta inverse-text">
           <div className="post__readmore">
-            <Link to={useLinkSingle(data.id)}>
+            <Link to={useLinkSingle(data.dataId)}>
               <span className="post__readmore-text f-16 f-w-400 me-5">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -65,20 +65,20 @@ function PostVerticalReverseThumbAside({ data }) {
           </div>
         </div>
         <div className="post__thumb object-cover thumb-size-300">
-          <Link to={useLinkSingle(data.id)}>
+          <Link to={useLinkSingle(data.dataId)}>
             <img src={data?.thumb} alt="" />
           </Link>
         </div>
       </div>
       <div className="post__text">
         <Link
-          to={useLinkSingle(data.id)}
+          to={useLinkSingle(data.dataId)}
           className="post__cat text-uppercase f-w-500"
         >
           {data?.categoryName}
         </Link>
         <h3 className="post__title f-30 mt-10 mb-10">
-          <Link to={useLinkSingle(data.id)}>{data?.title}</Link>
+          <Link to={useLinkSingle(data.dataId)}>{data?.title}</Link>
         </h3>
         <div className="post__meta flex-box">
           <div className="post__author me-5">

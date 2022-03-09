@@ -13,14 +13,14 @@ function PostOverlayMd({ data }) {
   return (
     <article className="post post--overlay post--overlay-bottom post--overlay-md">
       <div className="post__thumb object-cover">
-        <Link to={useLinkSingle(data.id)}>
+        <Link to={useLinkSingle(data.dataId)}>
           <img src={data?.thumb} alt="" />
         </Link>
       </div>
       <div className="post__text inverse-text overlay-420">
         <div className="post__text-inner">
           <Link
-            to={useLinkSingle(data.id)}
+            to={useLinkSingle(data.dataId)}
             className="post__cat text-uppercase post__cat-normal bg-primary"
           >
             {data?.categoryName}
@@ -48,6 +48,7 @@ function PostOverlayMd({ data }) {
           </div>
         </div>
       </div>
+      <Link className="link-overlay" to={useLinkSingle(data.dataId)} />
     </article>
   );
 }

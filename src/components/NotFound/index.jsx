@@ -5,7 +5,7 @@ function NotFound() {
   return (
     <section className="section-block not-found">
       <div className="container">
-        <div class="not-found__inner">
+        <div className="not-found__inner">
           <div className="not-found__thumb object-cover thumb-md">
             <img
               alt=""

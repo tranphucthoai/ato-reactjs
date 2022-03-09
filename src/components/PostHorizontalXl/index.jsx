@@ -14,19 +14,19 @@ function PostHorizontalXl({ data }) {
   return (
     <article className="post post--horizontal post--horizontal-xl">
       <div className="post__thumb thumb-size-270 object-cover">
-        <Link to={useLinkSingle(data.id)}>
+        <Link to={useLinkSingle(data.dataId)}>
           <img src={data?.thumb} alt="" />
         </Link>
       </div>
       <div className="post__text">
         <Link
-          to={useLinkSingle(data.id)}
+          to={useLinkSingle(data.dataId)}
           className="post__cat text-uppercase f-w-500"
         >
           {data?.categoryName}
         </Link>
         <h3 className="post__title f-24 f-w-700 mt-10 text-limit-2">
-          <Link to={useLinkSingle(data.id)}>{data?.title}</Link>
+          <Link to={useLinkSingle(data.dataId)}>{data?.title}</Link>
         </h3>
         <div className="post__meta mt-15 flex-box">
           <div className="post__author me-5 op-08">

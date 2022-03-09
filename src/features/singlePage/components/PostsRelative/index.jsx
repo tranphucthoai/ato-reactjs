@@ -13,7 +13,7 @@ function PostsRelative({ data }) {
       <div className="section-inner container">
         <ul className="posts-list flex-box flex-box-3i flex-space-30">
           {data.map((item, index) => (
-            <li key={item.id || index} className="posts-item">
+            <li key={item?.id || index} className="posts-item">
               <PostOverlayNormal data={item} />
             </li>
           ))}

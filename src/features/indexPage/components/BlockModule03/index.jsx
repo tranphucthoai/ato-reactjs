@@ -24,8 +24,6 @@ function BlockModule03({ data }) {
     carouselRef?.current.next(500);
   };
 
-  console.log("carouselRef", carouselRef);
-
   return (
     <section className="section-block block-module-03">
       <div className="container-lg px-15">

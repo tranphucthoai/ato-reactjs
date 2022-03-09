@@ -11,13 +11,13 @@ function PostHorizontalXs({ data }) {
   return (
     <article className="post post--horizontal post--horizontal-middle post--horizontal-sx">
       <div className="post__thumb thumb-size-80 object-cover me-10">
-        <Link to={useLinkSingle(data.id)}>
+        <Link to={useLinkSingle(data.dataId)}>
           <img src={data?.thumb} alt="" />
         </Link>
       </div>
       <div className="post__text">
         <h3 className="post__title f-16 f-w-700 mt-10">
-          <Link to={useLinkSingle(data.id)}>{data?.title}</Link>
+          <Link to={useLinkSingle(data.dataId)}>{data?.title}</Link>
         </h3>
         <div className="post__meta mt-5 flex-box">
           <div className="post__time">

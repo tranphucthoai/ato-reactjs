@@ -10,6 +10,7 @@ function App() {
       <main>
         <Routes>
           <Route index element={<IndexPage />} />
+          <Route path=":id" element={<SinglePage />} />
           <Route path="/single" element={<SinglePage />} />
           <Route path="/listing" element={<ListPage />} />
           <Route path="*" element={<NotFound />} />

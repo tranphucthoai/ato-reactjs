@@ -11,19 +11,19 @@ function PostVeticalFullWidth({ data = {} }) {
   return (
     <article className="post post--vertical post--vertical-fullwidth">
       <div className="post__thumb object-cover thumb-700 thumb-lg">
-        <Link to={useLinkSingle(data.id)}>
+        <Link to={useLinkSingle(data.dataId)}>
           <img src={data?.thumb} alt="" />
         </Link>
       </div>
       <div className="post__text inverse-text text-center container">
         <Link
           className="post__cat text-uppercase post__cat-normal bg-primary"
-          to={useLinkSingle(data.id)}
+          to={useLinkSingle(data.dataId)}
         >
           {data?.categoryName}
         </Link>
         <h3 className="post__title text-capitalize f-w-700 f-60 mt-15">
-          <Link to={useLinkSingle(data.id)}>{data?.title}</Link>
+          <Link to={useLinkSingle(data.dataId)}>{data?.title}</Link>
         </h3>
         <div className="post__meta mt-15 flex-box justify-content-center">
           <div className="post__author me-5 ">

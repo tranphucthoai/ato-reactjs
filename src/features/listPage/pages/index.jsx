@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useMemo } from "react";
-import { PaginationNormal, PostOverlayNormal } from "../../../components";
-import { dataApi } from "../../../api";
 import queryString from "query-string";
+import React, { useEffect, useMemo, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import { dataApi } from "../../../api";
+import { PaginationNormal, PostOverlayNormal } from "../../../components";
 
 function ListPage() {
   const [data, setData] = useState([]);

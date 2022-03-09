@@ -15,19 +15,19 @@ function PostHorizontalTextMargin({ data }) {
   return (
     <article className="post post--horizontal  post--horizontal-middle post--horizontal-reverse post--horizontal-text-margin">
       <div className="post__thumb thumb-size-270 object-cover">
-        <Link to={useLinkSingle(data.id)}>
+        <Link to={useLinkSingle(data.dataId)}>
           <img src={data?.thumb} alt="" />
         </Link>
       </div>
       <div className="post__text inverse-text">
         <Link
-          to={useLinkSingle(data.id)}
+          to={useLinkSingle(data.dataId)}
           className="post__cat text-uppercase post__cat-normal bg-primary"
         >
           {data?.categoryName}
         </Link>
         <h3 className="post__title f-46 f-w-700 mt-10">
-          <Link to={useLinkSingle(data.id)}>{data?.title}</Link>
+          <Link to={useLinkSingle(data.dataId)}>{data?.title}</Link>
         </h3>
         <div className="post__meta mt-15 flex-box align-item-center">
           <div className="post__author me-7 post__author-normal flex-box author-thumb-50 align-item-center">
