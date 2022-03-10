@@ -1,0 +1,40 @@
+.listing-grid-has-sidebar-01 {
+    .section-inner {
+        .main-col {
+            width: 70%;
+            padding-left: 15px;
+        }
+        .sub-col {
+            width: 30%;
+            padding-left: 30px;
+            padding-right: 15px;
+        }
+        @media (max-width: 991.98px) {
+            .main-col {
+                width: 100%;
+                padding: 15px;
+            }
+            .sub-col {
+                width: 100%;
+                padding: 15px;
+            }
+        }
+        @media (max-width: 575.98px) {
+            .flex-box-2i {
+                >* {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.widget__title-normal {
+    margin-bottom: 20px;
+}
+
+.line-item {
+    .list-item:not(:last-child) {
+        border-bottom: 1px solid $color-black-opacity-10;
+    }
+}

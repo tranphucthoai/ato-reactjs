@@ -1,0 +1,148 @@
+.post--vertical-fullwidth {
+  background: linear-gradient(90deg, $color-bg 13px, transparent 1%) center,
+    linear-gradient($color-bg 13px, transparent 1%) center, #6d6d6d;
+  background-size: 15px 15px;
+  &.disabled-link {
+    * {
+      cursor: default !important;
+    }
+  }
+}
+
+.post--vertical-fullwidth .post__text {
+  padding-top: 84px;
+  padding-bottom: 84px;
+}
+
+.block-module-01 {
+}
+
+.block-module-01 .section-sub {
+  background-color: $color-bg;
+}
+
+.post--vertical-reverse {
+  padding: 43px 63px;
+  transition: all 0.3s;
+  border: 1px solid $color-boder-light;
+}
+
+.post--vertical-reverse .post__meta {
+  order: 1;
+}
+
+.post--vertical-reverse .post__text {
+  order: -1;
+  margin-bottom: 40px;
+}
+
+.post--vertical-reverse .post__thumb {
+  margin-bottom: 20px;
+}
+
+.post--vertical-reverse .post__readmore {
+  opacity: 0.8;
+  transition: all 0.3s;
+}
+
+.post--vertical-reverse .post__readmore a > svg {
+  fill: $color-white;
+}
+
+@media (max-width: 1680px) {
+}
+
+@media (max-width: 1545px) {
+}
+
+@media (max-width: 1440px) {
+}
+
+@media (max-width: 1366px) {
+}
+
+@media (max-width: 1199px) {
+  .post--vertical-reverse {
+    padding: 25px 20px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .block-module-01 .section-sub .flex-box-3i > * {
+    width: 50%;
+  }
+}
+
+@media (max-width: 1080px) and (min-width: 992px) {
+  .post--vertical-reverse {
+    padding: 33px 43px;
+  }
+}
+
+@media (max-width: 991px) {
+  .post--vertical-reverse .post__text {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 860px) {
+}
+@media (min-width: 768px) {
+  .block-module-01 {
+    .section-sub {
+      .posts-list {
+        .list-item {
+          //   height: 100%;
+          .post {
+            height: 100%;
+
+            .post__text {
+              flex: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .post--vertical-fullwidth .post__text {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .block-module-01 .section-sub .flex-box-3i > * {
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) {
+  .post--vertical-reverse:hover {
+    background-color: $color-primary;
+  }
+  .post--vertical-reverse:hover .post__readmore {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 575px) {
+  .post--vertical-fullwidth .post__text {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .post--vertical-reverse {
+    padding: 20px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+}
+
+@media (max-width: 420px) {
+}
+
+@media (max-width: 380px) {
+}
+
+@media (max-width: 320px) {
+}
