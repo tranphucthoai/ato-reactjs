@@ -2,7 +2,7 @@ import DOMPurify from "dompurify";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { authorApi, postsApi } from "../../../api";
-import { PostVerticalFullWidth } from "../../../components";
+import { PostVerticalFullWidth, PreLoad } from "../../../components";
 import {
   AuthorVerticel,
   PostsNavigation,
@@ -10,10 +10,9 @@ import {
   SocialVertical,
 } from "../components";
 
-SinglePage.propTypes = {};
-
 function SinglePage() {
   const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [post, setPost] = useState({});
   const [author, setAuthor] = useState({});
   const { id } = useParams();
@@ -56,6 +55,7 @@ function SinglePage() {
       } catch (error) {
         console.log("Failed to fetch author api", error);
       }
+      setLoading(false);
     })();
   }, [post]);
 
@@ -93,15 +93,16 @@ function SinglePage() {
   };
 
   const dataPostRelative = getRandomPosts(posts, 3);
-  const dataPostNavigation = getNavPosts(posts, idd.replace(":", ""));
+  const dataPostNavigation = getNavPosts(posts, idd?.replace(":", ""));
 
   const htmlClear = DOMPurify.sanitize(post.content);
 
+  if (loading) return <PreLoad />;
   return (
     <>
       <section className="single">
         <div className="single-header">
-          <PostVerticalFullWidth data={post} />
+          <PostVerticalFullWidth data={post} disabledLink={true} />
         </div>
         <div className="single-content">
           <div className="container">

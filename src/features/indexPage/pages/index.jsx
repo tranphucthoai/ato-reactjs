@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { dataApi } from "../../../api";
 import "../../../assets/scss/app.scss";
+import { PreLoad } from "../../../components";
 import {
   BlockModule01,
   BlockModule02,
@@ -13,6 +14,8 @@ import {
 
 function IndexPage() {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     (async () => {
       try {
@@ -21,8 +24,11 @@ function IndexPage() {
       } catch (error) {
         console.log("Failed to fetch data api", error);
       }
+      setLoading(false);
     })();
   }, []);
+
+  if (loading) return <PreLoad />;
   return (
     <>
       <BlockModule01 data={data?.slice(0, 4)} />

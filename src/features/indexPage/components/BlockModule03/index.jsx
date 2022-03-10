@@ -10,11 +10,8 @@ import {
 BlockModule03.propTypes = {
   data: PropTypes.array.isRequired,
 };
-BlockModule03.defaultProps = {
-  data: [],
-};
 
-function BlockModule03({ data }) {
+function BlockModule03({ data = [] }) {
   const carouselRef = useRef();
 
   const handleCarouselPrev = () => {

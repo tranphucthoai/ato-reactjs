@@ -20,3 +20,4 @@ export { default as Footer } from "./Footer";
 export { default as NotFound } from "./NotFound";
 export { default as PaginationNormal } from "./PaginationNormal";
 export { default as SkeletonOverLay } from "./SkeletonOverLay";
+export { default as PreLoad } from "./PreLoad";
