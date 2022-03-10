@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Header() {
   useEffect(() => {
@@ -44,29 +44,29 @@ function Header() {
           <div className="navbar__collapse hide-md">
             <ul className="nav">
               <li className="nav__item">
-                <Link to={"/"} className="nav__link active">
+                <NavLink to={"/"} className="nav__link">
                   Home
-                </Link>
+                </NavLink>
               </li>
               <li className="nav__item">
-                <Link to={"/listing"} className="nav__link active">
+                <NavLink to={"/listing"} className="nav__link">
                   BlogPost
-                </Link>
+                </NavLink>
               </li>
               <li className="nav__item">
-                <Link to={"/single"} className="nav__link active">
+                <NavLink to={"/single"} className="nav__link">
                   Single
-                </Link>
+                </NavLink>
               </li>
               <li className="nav__item">
-                <Link to={"/not-found"} className="nav__link active">
+                <NavLink to={"/not-found"} className="nav__link">
                   NOTFOUND
-                </Link>
+                </NavLink>
               </li>
               <li className="nav__item">
-                <Link to={"/error"} className="nav__link active">
+                <NavLink to={"/error"} className="nav__link">
                   ERROR
-                </Link>
+                </NavLink>
               </li>
               <form className="d-flex">
                 <div className="dropdown js-dropdown dropdown-search">
@@ -158,34 +158,29 @@ function Header() {
         <div className="offcanvas-body">
           <ul className="nav nav-vertical">
             <li className="nav__item">
-              <Link to={"/"} className="nav__link active">
+              <NavLink to={"/"} className="nav__link">
                 Home
-              </Link>
+              </NavLink>
             </li>
             <li className="nav__item">
-              <Link to={"/"} className="nav__link">
+              <NavLink to={"/listing"} className="nav__link">
                 BlogPost
-              </Link>
+              </NavLink>
             </li>
             <li className="nav__item">
-              <Link to={"/"} className="nav__link">
+              <NavLink to={"/single"} className="nav__link">
                 Single
-              </Link>
+              </NavLink>
             </li>
             <li className="nav__item">
-              <Link to={"/"} className="nav__link">
-                System Pages
-              </Link>
+              <NavLink to={"/not-found"} className="nav__link">
+                NotFound
+              </NavLink>
             </li>
             <li className="nav__item">
-              <Link to={"/"} className="nav__link">
-                Contact
-              </Link>
-            </li>
-            <li className="nav__item">
-              <Link to={"/"} className="nav__link">
-                Langding Page
-              </Link>
+              <NavLink to={"/error"} className="nav__link">
+                ERROR
+              </NavLink>
             </li>
           </ul>
         </div>
