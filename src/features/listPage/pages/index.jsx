@@ -35,7 +35,6 @@ function ListPage() {
       setLoading(false);
     })();
   }, [queryParams]);
-
   const { _totalRows: total, _limit: limit, _page: page } = pagination;
 
   const handlePaginChange = (pageChange) => {
