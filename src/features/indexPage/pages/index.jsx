@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { dataApi } from "../../../api";
-import "../../../assets/scss/app.scss";
 import { PreLoad } from "../../../components";
 import {
   BlockModule01,
