@@ -1,0 +1,27 @@
+.author-verticel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .author__thumb {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  .author-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .author__name {
+    font-weight: 700;
+    color: $color-text-dark;
+    text-transform: capitalize;
+  }
+  .author__time {
+    color: rgba($color-text-dark, 0.5);
+    font-style: italic;
+  }
+}

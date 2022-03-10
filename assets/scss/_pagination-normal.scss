@@ -1,0 +1,45 @@
+.pagination-wrap {
+  margin-top: 30px;
+}
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -5px;
+  &.pagination-normal {
+    .page-item {
+      padding: 5px;
+      .page-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 35px;
+        height: 35px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s;
+
+        &:hover {
+          background-color: $color-primary;
+          color: $color-white;
+        }
+      }
+      &.active {
+        .page-link {
+          background-color: $color-primary;
+          color: $color-white;
+        }
+      }
+      &:not(:last-child):not(:first-child) {
+        .page-link {
+          border: 1px solid $color-border-input;
+        }
+      }
+    }
+  }
+  &.center {
+    justify-content: center;
+  }
+  &.end {
+    justify-content: flex-end;
+  }
+}
