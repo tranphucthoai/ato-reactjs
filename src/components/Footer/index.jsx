@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 Footer.propTypes = {};
 
@@ -7,34 +8,34 @@ function Footer(props) {
     <footer className="footer">
       <div className="footer-inner">
         <div className="footer__logo">
-          <a className="logo-footer" href="/">
+          <Link className="logo-footer" to={"/"}>
             <img
               alt=""
               src="https://f.hubspotusercontent40.net/hub/20002096/hubfs/logo-white-2.png?width=108&name=logo-white-2.png"
             />
-          </a>
+          </Link>
         </div>
         <div className="footer__nav">
           <ul className="nav-footer-list">
             <li className="nav-footer-item">
-              <a href="/" className="nav-footer__link">
-                DOCUMENTATION
-              </a>
+              <Link to={"/"} className="nav-footer__link">
+                HOME
+              </Link>
             </li>
             <li className="nav-footer-item">
-              <a href="/" className="nav-footer__link">
-                BUY THEME
-              </a>
+              <Link to={"/listing"} className="nav-footer__link">
+                POSTS
+              </Link>
             </li>
             <li className="nav-footer-item">
-              <a href="/" className="nav-footer__link">
-                MORE THEMES
-              </a>
+              <Link to={"/single"} className="nav-footer__link">
+                SINGLE
+              </Link>
             </li>
             <li className="nav-footer-item">
-              <a href="/" className="nav-footer__link">
-                CONTACT US
-              </a>
+              <Link to={"not-found"} className="nav-footer__link">
+                NOTFOUND
+              </Link>
             </li>
           </ul>
         </div>

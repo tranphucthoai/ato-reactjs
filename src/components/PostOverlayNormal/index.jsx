@@ -48,7 +48,10 @@ function PostOverlayNormal({ data }) {
           </div>
         </div>
       </div>
-      <Link className="link-overlay" to={useLinkSingle(data.dataId)}></Link>
+      <Link
+        className="link-overlay"
+        to={useLinkSingle(data.dataId || data.id)}
+      ></Link>
     </article>
   );
 }

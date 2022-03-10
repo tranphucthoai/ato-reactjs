@@ -1,11 +1,15 @@
 import PropTypes from "prop-types";
 import React from "react";
+import { Link } from "react-router-dom";
+import { useLinkSingle } from "../../../../store";
 
 PostsNavigation.propTypes = {
   data: PropTypes.object,
 };
 
-function PostsNavigation({ data }) {
+function PostsNavigation({ data = {} }) {
+  const linkPrev = useLinkSingle(data.prev.id);
+  const linkNext = useLinkSingle(data.next.id);
   return (
     <div className="posts-navigation-wrap">
       <div className="posts-navigation">
@@ -15,13 +19,13 @@ function PostsNavigation({ data }) {
           <div className="posts-navigation__prev">
             <article className="post post-verticel">
               <div className="post__thumb object-cover">
-                <a href="/">
+                <Link to={linkPrev}>
                   <img src={data.prev.thumb} alt="" />
-                </a>
+                </Link>
               </div>
               <div className="post-text">
                 <div className="post__label-navigation">
-                  <a href="/">
+                  <Link to={linkPrev}>
                     <span>prev</span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -37,10 +41,10 @@ function PostsNavigation({ data }) {
                         opacity="0.8"
                       ></path>
                     </svg>
-                  </a>
+                  </Link>
                 </div>
                 <h3 className="post__title f-18">
-                  <a href="/">{data.prev.title}</a>
+                  <Link to={linkPrev}>{data.prev.title}</Link>
                 </h3>
               </div>
             </article>
@@ -52,13 +56,13 @@ function PostsNavigation({ data }) {
           <div className="posts-navigation__next">
             <article className="post post-verticel">
               <div className="post__thumb object-cover">
-                <a href="">
+                <Link to={linkNext}>
                   <img src={data.next.thumb} alt="" />
-                </a>
+                </Link>
               </div>
               <div className="post-text">
                 <div className="post__label-navigation">
-                  <a href="/">
+                  <Link to={linkNext}>
                     <span>next</span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -74,10 +78,10 @@ function PostsNavigation({ data }) {
                         opacity="0.8"
                       ></path>
                     </svg>
-                  </a>
+                  </Link>
                 </div>
                 <h3 className="post__title f-18">
-                  <a href="/">{data.next.title}</a>
+                  <Link to={linkNext}>{data.next.title}</Link>
                 </h3>
               </div>
             </article>

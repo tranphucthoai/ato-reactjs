@@ -1,7 +1,7 @@
 import { React } from "react";
 import { Route, Routes } from "react-router-dom";
 import { IndexPage, SinglePage, ListPage } from "./features";
-import { Header, Footer, NotFound } from "./components";
+import { Header, Footer, NotFound, Error } from "./components";
 
 function App() {
   return (
@@ -9,10 +9,12 @@ function App() {
       <Header />
       <main>
         <Routes>
-          <Route index element={<IndexPage />} />
-          <Route path=":id" element={<SinglePage />} />
-          <Route path="/single" element={<SinglePage />} />
+          <Route index path="/" element={<IndexPage />} />
+          <Route path="/single/*" element={<SinglePage />}>
+            <Route path=":id" element={<SinglePage />} />
+          </Route>
           <Route path="/listing" element={<ListPage />} />
+          <Route path="/error" element={<Error />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

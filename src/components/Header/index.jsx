@@ -60,17 +60,12 @@ function Header() {
               </li>
               <li className="nav__item">
                 <Link to={"/not-found"} className="nav__link active">
-                  System Pages
+                  NOTFOUND
                 </Link>
               </li>
               <li className="nav__item">
-                <Link to={"/"} className="nav__link active">
-                  Contact
-                </Link>
-              </li>
-              <li className="nav__item">
-                <Link to={"/"} className="nav__link active">
-                  Langding Page
+                <Link to={"/error"} className="nav__link active">
+                  ERROR
                 </Link>
               </li>
               <form className="d-flex">

@@ -4,5 +4,5 @@ export function useLinkSingle(dataId) {
   // let match = useRouteMatch();
 
   // return `${match.url}:${dataId}`;
-  return `:${dataId}`;
+  return `/single/:${dataId}`;
 }

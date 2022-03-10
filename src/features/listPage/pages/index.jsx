@@ -2,10 +2,15 @@ import queryString from "query-string";
 import React, { useEffect, useMemo, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { dataApi } from "../../../api";
-import { PaginationNormal, PostOverlayNormal } from "../../../components";
+import {
+  PaginationNormal,
+  PostOverlayNormal,
+  PreLoad,
+} from "../../../components";
 
 function ListPage() {
   const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [pagination, setPagination] = useState({});
   const location = useLocation();
   const params = queryString.parse(location.search);
@@ -27,6 +32,7 @@ function ListPage() {
       } catch (error) {
         console.log("Failed to fetch data api");
       }
+      setLoading(false);
     })();
   }, [queryParams]);
 
@@ -44,7 +50,7 @@ function ListPage() {
     });
   };
 
-  console.log("OPA", pagination);
+  if (loading) return <PreLoad />;
 
   return (
     <section className="section-block list-page">

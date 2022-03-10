@@ -15,14 +15,15 @@ function SinglePage() {
   const [loading, setLoading] = useState(true);
   const [post, setPost] = useState({});
   const [author, setAuthor] = useState({});
+  const [postRelative, setPostRelative] = useState([]);
   const { id } = useParams();
 
-  let idd;
+  let uid;
 
   if (id) {
-    idd = id;
+    uid = id;
   } else {
-    idd = posts[0]?.id;
+    uid = posts[0]?.id;
   }
 
   useEffect(() => {
@@ -39,13 +40,13 @@ function SinglePage() {
   useEffect(() => {
     (async () => {
       try {
-        const res = await postsApi.get(idd.replace(":", ""));
+        const res = await postsApi.get(uid.replace(":", ""));
         setPost(res);
       } catch (error) {
         console.log("Failed to fetch posts api", error);
       }
     })();
-  }, [idd]);
+  }, [uid]);
 
   useEffect(() => {
     (async () => {
@@ -59,16 +60,20 @@ function SinglePage() {
     })();
   }, [post]);
 
-  const getRandomPosts = (arr, itemCount) => {
-    let arrNew = [];
-    const arrOld = [...arr];
-    for (let index = 0; index < itemCount; index++) {
-      const numberRandom = Math.floor(Math.random() * arrOld.length);
-      arrNew.push(arrOld[numberRandom]);
-      arrOld.slice(arrOld[numberRandom], 1);
-    }
-    return arrNew;
-  };
+  useEffect(() => {
+    const getRandomPosts = (arr, itemCount) => {
+      let arrNew = [];
+      const arrOld = [...arr];
+      for (let index = 0; index < itemCount; index++) {
+        const numberRandom = Math.floor(Math.random() * arrOld.length);
+        arrNew.push(arrOld[numberRandom]);
+        arrOld.splice(numberRandom, 1);
+      }
+      return arrNew;
+    };
+
+    setPostRelative([...getRandomPosts(posts, 3)]);
+  }, [uid, posts]);
 
   const getNavPosts = (arr, id) => {
     const arrOld = [...arr];
@@ -92,8 +97,7 @@ function SinglePage() {
     return result;
   };
 
-  const dataPostRelative = getRandomPosts(posts, 3);
-  const dataPostNavigation = getNavPosts(posts, idd?.replace(":", ""));
+  const dataPostNavigation = getNavPosts(posts, uid?.replace(":", ""));
 
   const htmlClear = DOMPurify.sanitize(post.content);
 
@@ -123,7 +127,7 @@ function SinglePage() {
           </div>
         </div>
         <div className="single-footer">
-          <PostsRelative data={dataPostRelative} />
+          <PostsRelative data={postRelative} />
         </div>
       </section>
     </>
