@@ -1582,5 +1582,16 @@
   position: absolute;
   z-index: 1;
 }
+@media (max-width: 991.98px) {
+  .section-block:not(:last-child) {
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .section-block:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
 
 /* #endregion */
