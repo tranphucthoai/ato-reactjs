@@ -2,7 +2,7 @@ import DOMPurify from "dompurify";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { authorApi, postsApi } from "../../../api";
-import { PostVerticalFullWidth, PreLoad } from "../../../components";
+import { BackTop, PostVerticalFullWidth, PreLoad } from "../../../components";
 import {
   AuthorVerticel,
   PostsNavigation,
@@ -130,6 +130,7 @@ function SinglePage() {
           <PostsRelative data={postRelative} />
         </div>
       </section>
+      <BackTop />
     </>
   );
 }

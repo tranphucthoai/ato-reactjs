@@ -3,6 +3,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { dataApi } from "../../../api";
 import {
+  BackTop,
   PaginationNormal,
   PostOverlayNormal,
   PreLoad,
@@ -52,25 +53,28 @@ function ListPage() {
   if (loading) return <PreLoad />;
 
   return (
-    <section className="section-block list-page">
-      <div className="container">
-        <div className="section-inner container-fullwidth">
-          <ul className="posts-list flex-box flex-box-3i flex-space-30">
-            {data?.map((item, index) => (
-              <li key={item.id || index} className="posts-item">
-                <PostOverlayNormal data={item} />
-              </li>
-            ))}
-          </ul>
+    <>
+      <section className="section-block list-page">
+        <div className="container">
+          <div className="section-inner container-fullwidth">
+            <ul className="posts-list flex-box flex-box-3i flex-space-30">
+              {data?.map((item, index) => (
+                <li key={item.id || index} className="posts-item">
+                  <PostOverlayNormal data={item} />
+                </li>
+              ))}
+            </ul>
 
-          <PaginationNormal
-            handleChange={handlePaginChange}
-            itemCount={Math.ceil(total / limit)}
-            index={Number.parseInt(page)}
-          />
+            <PaginationNormal
+              handleChange={handlePaginChange}
+              itemCount={Math.ceil(total / limit)}
+              index={Number.parseInt(page)}
+            />
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <BackTop />
+    </>
   );
 }
 

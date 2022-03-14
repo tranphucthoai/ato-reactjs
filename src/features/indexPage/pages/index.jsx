@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { dataApi } from "../../../api";
-import { PreLoad } from "../../../components";
+import { BackTop, PreLoad } from "../../../components";
 import {
   BlockModule01,
   BlockModule02,
@@ -37,6 +37,7 @@ function IndexPage() {
       <ListingGridNoSidebar02 data={data?.slice(17, 21)} />
       <BlockModule03 data={data?.slice(21, 39)} />
       <ListingGridHasSidebar data={data?.slice(39, 55)} />
+      <BackTop />
     </>
   );
 }

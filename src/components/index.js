@@ -22,3 +22,4 @@ export { default as PaginationNormal } from "./PaginationNormal";
 export { default as SkeletonOverLay } from "./SkeletonOverLay";
 export { default as PreLoad } from "./PreLoad";
 export { default as Error } from "./Error";
+export { default as BackTop } from "./BackTop";
