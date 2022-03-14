@@ -27,7 +27,7 @@ function IndexPage() {
     })();
   }, []);
 
-  if (true) return <PreLoad />;
+  if (loading) return <PreLoad />;
   return (
     <>
       <BlockModule01 data={data?.slice(0, 4)} />
