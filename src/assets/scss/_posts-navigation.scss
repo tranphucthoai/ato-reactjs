@@ -6,6 +6,7 @@
     display: flex;
     flex-wrap: wrap;
     margin: -15px;
+
     > * {
       padding: 15px;
       width: 50%;
@@ -188,6 +189,18 @@
         }
       }
       &__next {
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .posts-navigation-wrap {
+    .posts-navigation {
+      .post {
+        &__thumb {
+          margin-right: 10px;
+        }
       }
     }
   }
