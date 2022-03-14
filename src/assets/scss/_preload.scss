@@ -138,3 +138,104 @@
     transform: scale(1) translateX(0);
   }
 }
+
+@media (max-width: 575.98px) {
+  .preload {
+    &-dots {
+      padding: 25px;
+    }
+    &__dot {
+      width: 28px;
+      height: 28px;
+    }
+  }
+  @keyframes FirstDot {
+    0% {
+      transform: scale(1) translateX(0);
+    }
+    25% {
+      transform: scale(1.4) translateX(0);
+    }
+    50% {
+      transform: scale(1) translateX(0);
+    }
+    83% {
+      transform: scale(1) translateX(200px);
+    }
+    100% {
+      transform: scale(1) translateX(0);
+    }
+  }
+
+  @keyframes SecondDot {
+    0% {
+      transform: translateX(0px);
+    }
+    27% {
+      transform: translateX(-40px);
+    }
+    50% {
+      transform: translateX(0px);
+    }
+    81% {
+      transform: translateX(140px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes ThirdDot {
+    0% {
+      transform: translateX(0px);
+    }
+    29% {
+      transform: translateX(-90px);
+    }
+    50% {
+      transform: translateX(0px);
+    }
+    79% {
+      transform: translateX(90px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes FourthDot {
+    0% {
+      transform: translateX(0px);
+    }
+    31% {
+      transform: translateX(-140px);
+    }
+    50% {
+      transform: translateX(0px);
+    }
+    77% {
+      transform: translateX(50px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes FifthDot {
+    0% {
+      transform: scale(1) translateX(0);
+    }
+    33% {
+      transform: scale(1) translateX(-200px);
+    }
+    50% {
+      transform: scale(1) translateX(0);
+    }
+    75% {
+      transform: scale(1.4) translateX(0);
+    }
+    100% {
+      transform: scale(1) translateX(0);
+    }
+  }
+}

@@ -11,13 +11,13 @@
   background-color: $color-primary;
   border: 1px solid $color-white;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.2s;
   border-radius: 5px;
   &:not(.hide) {
     backface-visibility: visible;
     visibility: visible;
     pointer-events: all;
-    opacity: 0.5;
+    opacity: 0.4;
   }
   &.hide {
     backface-visibility: hidden;
